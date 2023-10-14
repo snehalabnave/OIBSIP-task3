@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #d9eff9;
+  }
+  h2 {
+    color: #333;
+  }
+  label {
+    margin-bottom: 6px;
+    color: #0d0202;
+  }
+  input {
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #0d0347;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+  <h2><small>Temperature Converter from Celsius to Fahrenheit</small></h2>
+
+  <label for="celsius">Enter temperature in Celsius:</label><br>
+  <input type="number" id="celsius" placeholder="Celsius" oninput="convertTemp()"><br>
+
+  <label for="result">Result in Fahrenheit:</label><br>
+  <input type="text" id="result" disabled>
+
+  <script>
+    function convertTemp() {
+      var celsiusTemp = document.getElementById('celsius').value;
+      var fahrenheitTemp = (celsiusTemp * 9/5) + 32;
+      document.getElementById('result').value = fahrenheitTemp;
+    }
+  </script>
+
+</body>
+</html>
